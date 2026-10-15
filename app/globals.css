@@ -3,6 +3,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #726fab;        /* 主色 · 浅紫：标题渐变右端 */
+  --title-from: #8ecae6;     /* 标题渐变左端 · 浅蓝 */
+  --box-fill: #ececec;       /* 灰色填充：外框和按钮共用这一个色 */
+  --box-fill-hover: #dedede; /* 按钮悬停 · 稍暗一点（否则按钮和框同色，看不出按钮在哪） */
+  --btn-text: #3f3f46;       /* 按钮文字 · 深灰（原来是按钮底色，对调过来当字色） */
 }
 
 @theme inline {
@@ -23,4 +28,174 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+
+  /* 页面背景图：图放在 public/ 下，所以直接从 / 开始引用 */
+  background-image: url("/bg.jpg");
+  background-size: cover;        /* 铺满整屏，比例不变，超出部分裁掉 */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ============================================================
+   首页（app/page.js）
+   ------------------------------------------------------------
+   想换主色，改上面 :root 里的 --primary 即可。
+   ============================================================ */
+
+/* 内容区：贴着左上角，只留一点边距 */
+.page {
+  padding: 40px 48px;
+  text-align: left;
+}
+
+/* ---------- 标题：从左到右 浅蓝 → 浅紫 的渐变 · 黑体 ---------- */
+
+.page-title {
+  margin: 0 0 36px;
+  font-size: clamp(4rem, 12vw, 6.4rem);
+  font-family: "黑体", "SimHei", "Heiti SC", "Microsoft YaHei", sans-serif;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  /* 文字渐变的老套路：先把渐变画成"背景"，再用 background-clip 把背景裁进文字的轮廓里，
+     最后把真正的字色设成透明，露出来的就只剩背景那层渐变了。
+     90deg = 从左往右。 */
+  background-image: linear-gradient(90deg, var(--title-from), var(--primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- 按钮外面的灰色圆角框 ---------- */
+
+.btn-box {
+  display: inline-block;      /* 宽高跟着按钮走，不撑满整行 */
+  padding: 40px 56px;
+  background: var(--box-fill);   /* 灰色填充 */
+  border-radius: 18px;        /* 四个角 18px 圆弧 */
+}
+
+/* ---------- 按钮本身（底色跟灰框同色 + 深灰"进入"，点击跳到 /home） ---------- */
+
+.btn {
+  display: block;
+  text-decoration: none;      /* 现在是 <Link>（渲染成 <a>），去掉链接默认的下划线 */
+  min-width: 132px;           /* 长度 */
+  padding: 26px 36px;         /* 原来是 26px 64px：左右收窄，"进入"两个字才塞得进 132px 里 */
+  border: none;
+  border-radius: 12px;
+  background: var(--box-fill);
+  color: var(--btn-text);
+  font-size: 1.5rem;
+  font-family: "黑体", "SimHei", "Heiti SC", "Microsoft YaHei", sans-serif;   /* 跟标题同一套黑体 */
+  text-align: center;         /* 字居中 */
+  cursor: pointer;
+  transition: background .18s ease, transform .18s ease;
+}
+
+.btn:hover {
+  background: var(--box-fill-hover);
+  transform: translateY(-2px);
+}
+
+.btn:active { transform: translateY(0); }
+
+/* ---------- 右下角的装饰图 ---------- */
+
+.corner-img {
+  position: fixed;            /* 钉在窗口右下角，不跟着内容流走 */
+  right: 0;
+  bottom: 0;
+  width: min(320px, 34vw);     /* 屏幕窄了自动缩小 */
+  aspect-ratio: 1702 / 1920;  /* 图的原始比例，用来占好高度 */
+  background: url("/figure.jpg") center bottom / contain no-repeat;
+  pointer-events: none;       /* 纯装饰，别挡住底下的点击 */
+
+  /* figure.jpg 是白底 JPG，没有透明通道。multiply（正片叠底）会把白色"融"进背景 ——
+     相当于就地抠掉白底，否则这里会露出一块白方块。想看图原样，把这行删掉即可。 */
+  mix-blend-mode: multiply;
+}
+
+/* ============================================================
+   home 页（app/home/page.js）
+   ============================================================ */
+
+/* 上端那条：读取音频（MP3）→ ＋，整体罩在白色圆角框里 */
+.audio-bar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: fit-content;         /* 宽度跟着内容走 */
+  margin: 0 auto 36px;        /* 横向居中，放在页面上端 */
+  padding: 14px 24px;
+  background: #fff;           /* 白色填充框架 */
+  border-radius: 18px;        /* 四个角 18px 圆弧 */
+}
+
+.audio-bar__name {
+  font-size: 1.25rem;
+  font-family: "黑体", "SimHei", "Heiti SC", "Microsoft YaHei", sans-serif;
+  color: #1a1a1a;
+}
+
+.audio-bar__arrow {
+  width: 30px;
+  height: 30px;
+  flex: none;                 /* 别被 flex 压扁 */
+  color: #1a1a1a;
+}
+
+.audio-bar__plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  border: none;
+  border-radius: 50%;
+  background: var(--box-fill);
+  color: #1a1a1a;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background .18s ease;
+}
+
+.audio-bar__plus:hover { background: var(--box-fill-hover); }
+
+/* 真正干活的 <input type="file">，藏起来，靠上面的加号去触发它 */
+.file-input-hidden { display: none; }
+
+.audio-bar__error {
+  width: fit-content;
+  margin: 0 auto 28px;
+  color: #c0392b;
+  font-size: 1rem;
+}
+
+/* ---------- 转文字按钮：黑体 + 黑色 ---------- */
+
+.btn-translate {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 16px 44px;
+  border-radius: 12px;
+  background: #000;           /* 黑色 */
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: "黑体", "SimHei", "Heiti SC", "Microsoft YaHei", sans-serif;   /* 黑体 */
+  text-align: center;
+  text-decoration: none;
+  transition: background .18s ease;
+}
+
+.btn-translate:hover { background: #333; }
+
+/* ---------- translate 页（app/translate/page.js） ---------- */
+
+.page-sub {
+  margin: 0 0 32px;
+  font-size: 1.125rem;
 }
