@@ -1,0 +1,95 @@
+/* ============================================================
+   我的博客 · 首页样式
+   ------------------------------------------------------------
+   整页只有一个标题 + 一个按钮：标题贴左上角，按钮装在一个浅灰圆角框里。
+   想换配色，改下面 :root 里的变量即可。
+   ============================================================ */
+
+:root {
+  --bg:           #f7f8fc;   /* 页面底色 */
+  --text:         #0f172a;   /* 文字（备用） */
+  --primary:      #726fab;   /* 主色：标题文字 + 按钮底色 */
+  --primary-dark: #56538d;   /* 主色 · 悬停（同色系压暗） */
+  --radius:       12px;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  display: block;             /* 原来用 grid 把内容摆到正中间；现在标题要贴左上角 */
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- 首页背景图 ---------- */
+
+/* 只有 <body class="home">（index.html）会套上；transmissions.html 没这个 class，不受影响。
+   上面的 background: var(--bg) 留着当兜底，图加载出来之前先显示底色。 */
+.home {
+  background-image: url("./assets/bg.jpg");
+  background-size: cover;        /* 铺满整屏，比例不变，超出的部分裁掉 */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ---------- 内容区 ---------- */
+
+.page {
+  padding: 40px 48px;         /* 靠左上角，留一点边距 */
+  text-align: left;
+}
+
+.page-title {
+  margin: 0 0 36px;
+  font-size: clamp(4rem, 12vw, 6.4rem);   /* 原来是 clamp(2rem, 6vw, 3.2rem)，各档都翻倍 */
+  font-family: "黑体", "SimHei", cursive;   /* 行楷；后两个是没装行楷时的兜底 */
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  color: var(--primary);      /* 纯色（原来是两个颜色做渐变文字，现在统一成 #726fab） */
+}
+
+/* ---------- 按钮外面的浅灰圆角框 ---------- */
+
+.btn-box {
+  display: inline-block;      /* 宽高跟着按钮走，不撑满整行 */
+  padding: 40px 56px;         /* 比按钮大一圈，看起来才像"框住"；原来是 20px 28px，翻倍 */
+  background: #ececec;        /* 浅灰填充 */
+  border-radius: 18px;
+}
+
+/* ---------- 按钮 ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 264px;           /* 原 132px */
+  padding: 26px 64px;         /* 原 13px 32px */
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: #fff;
+  font-size: 2rem;            /* 原 1rem */
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 20px 44px -26px rgba(114, 111, 171, .95);   /* 跟着按钮一起放大，视觉比例才不变 */
+  transition: background .18s ease, transform .18s ease;
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn:active { transform: translateY(0); }
+
+/* 尊重系统的"减少动态效果"设置 */
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none; }
+  .btn:hover { transform: none; }
+}

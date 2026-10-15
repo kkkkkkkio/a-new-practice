@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>我的博客</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- animate.css：下面 h1 和 .btn-box 上的 animate__backInLeft 来自这里 -->
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<!-- class="home" 用来标记"这是首页"，背景图那几条样式只认它，transmissions.html 不受影响 -->
+<body class="home">
+
+  <main class="page">
+    <!-- 文字由 js/title.js 从配置里填；这里留着同样内容作为兜底 -->
+    <!-- animate__animated 负责套用动画的基础时长/缓动，animate__backInLeft 负责"从左飞入" -->
+    <h1 class="page-title animate__animated animate__backInLeft" id="page-title">我的博客</h1>
+
+    <!-- 按钮的文案和跳转地址都在 js/config.js 里配 -->
+    <!-- 灰框自己飞入，按钮在框里，跟着一起进来（不再单独加一遍，否则位移会叠加） -->
+    <div class="btn-box animate__animated animate__backInLeft">
+      <a href="#" class="btn" id="enter-btn">进入</a>
+    </div>
+  </main>
+
+  <!--
+    模块化之后，底部只剩这一行。
+
+    改造前这里是一长串 script 标签，还得小心排先后顺序；
+    现在顺序写在代码里了：main.js 顶上 import 谁，谁就先加载。
+
+    type="module" 是必须的 —— 没有它，文件里的 import / export 浏览器不认。
+
+    另外：ES 模块必须走服务器，双击 index.html（file://）会被浏览器拦掉。
+  -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
