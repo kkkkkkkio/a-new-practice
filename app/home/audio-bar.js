@@ -3,6 +3,7 @@
 //   Next 默认让所有组件在服务器端渲染，碰到这种要交互的组件就得显式声明"这是客户端组件"。
 
 import { useRef, useState } from "react";
+import { setPickedAudio } from "../audio-store";
 
 const MAX_SIZE = 10 * 1024 * 1024; // 10 MB
 
@@ -18,6 +19,7 @@ export default function AudioBar() {
     // 要求：最大 10M，超了就拒绝
     if (file.size > MAX_SIZE) {
       setFileName("");
+      setPickedAudio(null); // 别把上一个文件留在暂存里
       setError(
         `「${file.name}」有 ${(file.size / 1024 / 1024).toFixed(1)} MB，超过 10 MB 上限`
       );
@@ -27,6 +29,9 @@ export default function AudioBar() {
 
     setError("");
     setFileName(file.name);
+    // 文件本身存进暂存区：translate 页要拿它去做识别。
+    // 这里只存不读，所以 this 页面不用管识别的事。
+    setPickedAudio(file);
   }
 
   return (

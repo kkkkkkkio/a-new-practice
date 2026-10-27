@@ -199,3 +199,75 @@ body {
   margin: 0 0 32px;
   font-size: 1.125rem;
 }
+
+/* 识别结果卡片：白底 + 18px 圆角，跟 home 页那条音频栏同一套长相 */
+.asr-card {
+  width: fit-content;
+  min-width: min(560px, calc(100vw - 96px));
+  margin: 0 0 28px;
+  padding: 20px 24px;
+  background: #fff;
+  border-radius: 18px;
+}
+
+.asr-card__label {
+  margin: 0 0 6px;
+  font-size: 0.9rem;
+  color: #8a8a8a;
+  font-family: "黑体", "SimHei", "Heiti SC", "Microsoft YaHei", sans-serif;
+}
+
+.asr-card__file {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #1a1a1a;
+  word-break: break-all;   /* 文件名太长时换行，别把卡片撑破 */
+}
+
+/* 识别出来的文字：一眼能看清，所以字号给大一点 */
+.asr-result {
+  min-height: 3.2rem;
+  margin: 0;
+  padding: 16px 18px;
+  background: #f6f6f6;
+  border-radius: 12px;
+  color: #111;
+  font-size: 1.35rem;
+  line-height: 1.7;
+  white-space: pre-wrap;   /* 结果里的换行照原样显示 */
+  word-break: break-word;
+}
+
+/* 灰字小提示：识别失败的原因、没选音频的提醒 */
+.asr-note {
+  margin: 12px 0 0;
+  color: #8a8a8a;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  word-break: break-all;
+}
+
+/* 「重新识别」按钮：比下面那个黑色「返回」轻一点 */
+.btn-again {
+  display: block;
+  margin: 18px 0 0;
+  padding: 10px 26px;
+  border: 1px solid #d4d4d8;
+  border-radius: 12px;
+  background: #fff;
+  color: #1a1a1a;
+  font-size: 1rem;
+  font-family: "黑体", "SimHei", "Heiti SC", "Microsoft YaHei", sans-serif;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.btn-again:hover:not(:disabled) {
+  background: #f6f6f6;
+  border-color: #b8b8bd;
+}
+
+.btn-again:disabled {
+  color: #a1a1aa;
+  cursor: default;   /* 识别中，别让用户重复点 */
+}
