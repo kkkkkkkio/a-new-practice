@@ -1,14 +1,22 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = Geist({
+// 原来是 next/font/google 的 Geist / Geist Mono —— 它会在 build 时去
+// fonts.googleapis.com 下载字体，本机连不上就整个 build 失败。
+// 现在改成自托管：字体文件就在 app/fonts/ 里，build 和运行都不再联网。
+// CSS 变量名（--font-geist-sans / --font-geist-mono）没变，globals.css 不用动。
+const geistSans = localFont({
+  src: "./fonts/geist-latin.woff2",
   variable: "--font-geist-sans",
-  subsets: ["latin"],
+  weight: "100 900",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
+const geistMono = localFont({
+  src: "./fonts/geist-mono-latin.woff2",
   variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: "100 900",
+  display: "swap",
 });
 
 export const metadata = {
