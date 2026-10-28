@@ -43,3 +43,9 @@ next-env.d.ts
 
 # 后端语音识别模型（66MB，本地下载即可，不进仓库）
 backend/models/
+
+# .env* 会把模板文件也忽略掉，这里单独放行
+!.env.example
+
+# SQLite 缓存文件，不入库
+/.data/

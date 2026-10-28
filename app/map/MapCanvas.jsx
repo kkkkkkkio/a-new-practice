@@ -4,7 +4,7 @@
 // 不取数据、不存筛选状态，那些都在 MapView 里。
 
 import { useEffect, useRef, useState } from "react";
-import { CATEGORIES } from "./categories";
+import { CATEGORIES } from "@/lib/categories";
 
 // SDK 地址：有 key 时追加 &key=xxx；没有 key 时原样请求（走代理模式）。
 const SDK_SRC = "https://map.qq.com/api/gljs?v=1.exp";

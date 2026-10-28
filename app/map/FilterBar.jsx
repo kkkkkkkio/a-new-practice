@@ -3,7 +3,7 @@
 // 受控组件：自己不存任何状态，选中的值全靠 props 传进来、点击只往上回调。
 // 这样「当前选了什么」只存在 MapView 一处，不会出现两份状态对不上。
 
-import { ALL_CATEGORY, CATEGORIES, RADIUS_OPTIONS } from "./categories";
+import { ALL_CATEGORY, CATEGORIES, RADIUS_OPTIONS } from "@/lib/categories";
 
 function chipClass(selected) {
   return [
