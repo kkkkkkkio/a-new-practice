@@ -26,8 +26,8 @@
     },
     {
       "id": "p003",
-      "name": "示例·交通 01",
-      "category": "transit",
+      "name": "示例·景点 01",
+      "category": "attraction",
       "lng": 116.347122,
       "lat": 39.979349,
       "address": "示例地址 3 号",
@@ -35,8 +35,8 @@
     },
     {
       "id": "p004",
-      "name": "示例·超市 01",
-      "category": "market",
+      "name": "示例·商场 01",
+      "category": "mall",
       "lng": 116.345488,
       "lat": 39.980568,
       "address": "示例地址 4 号",
@@ -44,8 +44,8 @@
     },
     {
       "id": "p005",
-      "name": "示例·校园 01",
-      "category": "campus",
+      "name": "示例·超市 01",
+      "category": "market",
       "lng": 116.351382,
       "lat": 39.982047,
       "address": "示例地址 5 号",
@@ -53,17 +53,17 @@
     },
     {
       "id": "p006",
-      "name": "示例·餐饮 02",
-      "category": "restaurant",
-      "lng": 116.341408,
-      "lat": 39.977358,
+      "name": "示例·交通 01",
+      "category": "transit",
+      "lng": 116.345532,
+      "lat": 39.979637,
       "address": "示例地址 6 号",
-      "distance": 692
+      "distance": 259
     },
     {
       "id": "p007",
-      "name": "示例·咖啡 02",
-      "category": "cafe",
+      "name": "示例·餐饮 02",
+      "category": "restaurant",
       "lng": 116.339988,
       "lat": 39.983606,
       "address": "示例地址 7 号",
@@ -71,8 +71,8 @@
     },
     {
       "id": "p008",
-      "name": "示例·交通 02",
-      "category": "transit",
+      "name": "示例·咖啡 02",
+      "category": "cafe",
       "lng": 116.342253,
       "lat": 39.982822,
       "address": "示例地址 8 号",
@@ -80,8 +80,8 @@
     },
     {
       "id": "p009",
-      "name": "示例·超市 02",
-      "category": "market",
+      "name": "示例·景点 02",
+      "category": "attraction",
       "lng": 116.348759,
       "lat": 39.98696,
       "address": "示例地址 9 号",
@@ -89,8 +89,8 @@
     },
     {
       "id": "p010",
-      "name": "示例·校园 02",
-      "category": "campus",
+      "name": "示例·商场 02",
+      "category": "mall",
       "lng": 116.354025,
       "lat": 39.97827,
       "address": "示例地址 10 号",
@@ -98,26 +98,26 @@
     },
     {
       "id": "p011",
-      "name": "示例·餐饮 03",
-      "category": "restaurant",
-      "lng": 116.354277,
-      "lat": 39.96842,
+      "name": "示例·超市 02",
+      "category": "market",
+      "lng": 116.351211,
+      "lat": 39.974566,
       "address": "示例地址 11 号",
-      "distance": 1498
+      "distance": 766
     },
     {
       "id": "p012",
-      "name": "示例·咖啡 03",
-      "category": "cafe",
-      "lng": 116.342851,
-      "lat": 39.972278,
+      "name": "示例·交通 02",
+      "category": "transit",
+      "lng": 116.34533,
+      "lat": 39.976477,
       "address": "示例地址 12 号",
-      "distance": 1064
+      "distance": 552
     },
     {
       "id": "p013",
-      "name": "示例·交通 03",
-      "category": "transit",
+      "name": "示例·餐饮 03",
+      "category": "restaurant",
       "lng": 116.336807,
       "lat": 39.972379,
       "address": "示例地址 13 号",
@@ -125,8 +125,8 @@
     },
     {
       "id": "p014",
-      "name": "示例·超市 03",
-      "category": "market",
+      "name": "示例·咖啡 03",
+      "category": "cafe",
       "lng": 116.332101,
       "lat": 39.981394,
       "address": "示例地址 14 号",
@@ -134,8 +134,8 @@
     },
     {
       "id": "p015",
-      "name": "示例·校园 03",
-      "category": "campus",
+      "name": "示例·景点 03",
+      "category": "attraction",
       "lng": 116.346933,
       "lat": 39.994566,
       "address": "示例地址 15 号",
@@ -143,35 +143,35 @@
     },
     {
       "id": "p016",
-      "name": "示例·餐饮 04",
-      "category": "restaurant",
-      "lng": 116.34713,
-      "lat": 39.982111,
+      "name": "示例·商场 03",
+      "category": "mall",
+      "lng": 116.34158,
+      "lat": 39.989196,
       "address": "示例地址 16 号",
-      "distance": 144
+      "distance": 1063
     },
     {
       "id": "p017",
-      "name": "示例·咖啡 04",
-      "category": "cafe",
-      "lng": 116.34827,
-      "lat": 39.983084,
+      "name": "示例·超市 03",
+      "category": "market",
+      "lng": 116.349492,
+      "lat": 39.99251,
       "address": "示例地址 17 号",
-      "distance": 233
+      "distance": 1286
     },
     {
       "id": "p018",
-      "name": "示例·交通 04",
+      "name": "示例·交通 03",
       "category": "transit",
-      "lng": 116.352957,
-      "lat": 39.980271,
+      "lng": 116.368455,
+      "lat": 39.977992,
       "address": "示例地址 18 号",
-      "distance": 430
+      "distance": 1775
     },
     {
       "id": "p019",
-      "name": "示例·超市 04",
-      "category": "market",
+      "name": "示例·餐饮 04",
+      "category": "restaurant",
       "lng": 116.350731,
       "lat": 39.980348,
       "address": "示例地址 19 号",
@@ -179,8 +179,8 @@
     },
     {
       "id": "p020",
-      "name": "示例·校园 04",
-      "category": "campus",
+      "name": "示例·咖啡 04",
+      "category": "cafe",
       "lng": 116.349881,
       "lat": 39.978146,
       "address": "示例地址 20 号",
@@ -188,44 +188,44 @@
     },
     {
       "id": "p021",
-      "name": "示例·餐饮 05",
-      "category": "restaurant",
-      "lng": 116.347598,
-      "lat": 39.988848,
+      "name": "示例·景点 04",
+      "category": "attraction",
+      "lng": 116.347814,
+      "lat": 39.984633,
       "address": "示例地址 21 号",
-      "distance": 873
+      "distance": 404
     },
     {
       "id": "p022",
-      "name": "示例·咖啡 05",
-      "category": "cafe",
-      "lng": 116.343516,
-      "lat": 39.985652,
+      "name": "示例·商场 04",
+      "category": "mall",
+      "lng": 116.346476,
+      "lat": 39.982581,
       "address": "示例地址 22 号",
-      "distance": 643
+      "distance": 219
     },
     {
       "id": "p023",
-      "name": "示例·交通 05",
-      "category": "transit",
-      "lng": 116.341632,
-      "lat": 39.98647,
+      "name": "示例·超市 04",
+      "category": "market",
+      "lng": 116.345203,
+      "lat": 39.983402,
       "address": "示例地址 23 号",
-      "distance": 815
+      "distance": 358
     },
     {
       "id": "p024",
-      "name": "示例·超市 05",
-      "category": "market",
-      "lng": 116.348657,
-      "lat": 39.987857,
+      "name": "示例·交通 04",
+      "category": "transit",
+      "lng": 116.348272,
+      "lat": 39.983836,
       "address": "示例地址 24 号",
-      "distance": 765
+      "distance": 316
     },
     {
       "id": "p025",
-      "name": "示例·校园 05",
-      "category": "campus",
+      "name": "示例·餐饮 05",
+      "category": "restaurant",
       "lng": 116.350008,
       "lat": 39.989097,
       "address": "示例地址 25 号",
@@ -233,210 +233,210 @@
     },
     {
       "id": "p026",
-      "name": "示例·餐饮 06",
-      "category": "restaurant",
-      "lng": 116.362398,
-      "lat": 39.992077,
+      "name": "示例·咖啡 05",
+      "category": "cafe",
+      "lng": 116.355329,
+      "lat": 39.986639,
       "address": "示例地址 26 号",
-      "distance": 1738
+      "distance": 885
     },
     {
       "id": "p027",
-      "name": "示例·咖啡 06",
-      "category": "cafe",
-      "lng": 116.330113,
-      "lat": 39.983242,
+      "name": "示例·景点 05",
+      "category": "attraction",
+      "lng": 116.338862,
+      "lat": 39.982146,
       "address": "示例地址 27 号",
-      "distance": 1544
+      "distance": 789
     },
     {
       "id": "p028",
-      "name": "示例·交通 06",
-      "category": "transit",
-      "lng": 116.34391,
-      "lat": 39.96771,
+      "name": "示例·商场 05",
+      "category": "mall",
+      "lng": 116.345909,
+      "lat": 39.974205,
       "address": "示例地址 28 号",
-      "distance": 1518
+      "distance": 776
     },
     {
       "id": "p029",
-      "name": "示例·超市 06",
+      "name": "示例·超市 05",
       "category": "market",
-      "lng": 116.341008,
-      "lat": 39.966536,
+      "lng": 116.344439,
+      "lat": 39.973634,
       "address": "示例地址 29 号",
-      "distance": 1715
+      "distance": 873
     },
     {
       "id": "p030",
-      "name": "示例·校园 06",
-      "category": "campus",
-      "lng": 116.331519,
-      "lat": 39.989592,
+      "name": "示例·交通 05",
+      "category": "transit",
+      "lng": 116.339605,
+      "lat": 39.985377,
       "address": "示例地址 30 号",
-      "distance": 1698
+      "distance": 865
     },
     {
       "id": "p031",
-      "name": "示例·餐饮 07",
+      "name": "示例·餐饮 06",
       "category": "restaurant",
-      "lng": 116.344401,
-      "lat": 39.981423,
+      "lng": 116.330889,
+      "lat": 39.983012,
       "address": "示例地址 31 号",
-      "distance": 310
+      "distance": 1475
     },
     {
       "id": "p032",
-      "name": "示例·咖啡 07",
+      "name": "示例·咖啡 06",
       "category": "cafe",
-      "lng": 116.350218,
-      "lat": 39.979165,
+      "lng": 116.359143,
+      "lat": 39.971782,
       "address": "示例地址 32 号",
-      "distance": 278
+      "distance": 1397
     },
     {
       "id": "p033",
-      "name": "示例·交通 07",
-      "category": "transit",
-      "lng": 116.344342,
-      "lat": 39.980054,
+      "name": "示例·景点 06",
+      "category": "attraction",
+      "lng": 116.331075,
+      "lat": 39.976622,
       "address": "示例地址 33 号",
-      "distance": 329
+      "distance": 1522
     },
     {
       "id": "p034",
-      "name": "示例·超市 07",
-      "category": "market",
-      "lng": 116.350123,
-      "lat": 39.983689,
+      "name": "示例·商场 06",
+      "category": "mall",
+      "lng": 116.357578,
+      "lat": 39.99313,
       "address": "示例地址 34 号",
-      "distance": 349
+      "distance": 1576
     },
     {
       "id": "p035",
-      "name": "示例·校园 07",
-      "category": "campus",
-      "lng": 116.352368,
-      "lat": 39.98339,
+      "name": "示例·超市 06",
+      "category": "market",
+      "lng": 116.365615,
+      "lat": 39.990639,
       "address": "示例地址 35 号",
-      "distance": 457
+      "distance": 1844
     },
     {
       "id": "p036",
-      "name": "示例·餐饮 08",
-      "category": "restaurant",
-      "lng": 116.344513,
-      "lat": 39.987213,
+      "name": "示例·交通 06",
+      "category": "transit",
+      "lng": 116.341188,
+      "lat": 39.993138,
       "address": "示例地址 36 号",
-      "distance": 752
+      "distance": 1469
     },
     {
       "id": "p037",
-      "name": "示例·咖啡 08",
-      "category": "cafe",
-      "lng": 116.351523,
-      "lat": 39.973802,
+      "name": "示例·餐饮 07",
+      "category": "restaurant",
+      "lng": 116.349606,
+      "lat": 39.97772,
       "address": "示例地址 37 号",
-      "distance": 855
+      "distance": 390
     },
     {
       "id": "p038",
-      "name": "示例·交通 08",
-      "category": "transit",
-      "lng": 116.341602,
-      "lat": 39.980937,
+      "name": "示例·咖啡 07",
+      "category": "cafe",
+      "lng": 116.346348,
+      "lat": 39.980984,
       "address": "示例地址 38 号",
-      "distance": 545
+      "distance": 141
     },
     {
       "id": "p039",
-      "name": "示例·超市 08",
-      "category": "market",
-      "lng": 116.340567,
-      "lat": 39.982616,
+      "name": "示例·景点 07",
+      "category": "attraction",
+      "lng": 116.345379,
+      "lat": 39.98157,
       "address": "示例地址 39 号",
-      "distance": 658
+      "distance": 232
     },
     {
       "id": "p040",
-      "name": "示例·校园 08",
-      "category": "campus",
-      "lng": 116.34976,
-      "lat": 39.985965,
+      "name": "示例·商场 07",
+      "category": "mall",
+      "lng": 116.348494,
+      "lat": 39.982394,
       "address": "示例地址 40 号",
-      "distance": 572
+      "distance": 161
     },
     {
       "id": "p041",
-      "name": "示例·餐饮 09",
-      "category": "restaurant",
-      "lng": 116.365759,
-      "lat": 39.981316,
+      "name": "示例·超市 07",
+      "category": "market",
+      "lng": 116.351822,
+      "lat": 39.981068,
       "address": "示例地址 41 号",
-      "distance": 1514
+      "distance": 326
     },
     {
       "id": "p042",
-      "name": "示例·咖啡 09",
-      "category": "cafe",
-      "lng": 116.368331,
-      "lat": 39.981914,
+      "name": "示例·交通 07",
+      "category": "transit",
+      "lng": 116.352855,
+      "lat": 39.981218,
       "address": "示例地址 42 号",
-      "distance": 1735
+      "distance": 414
     },
     {
       "id": "p043",
-      "name": "示例·交通 09",
-      "category": "transit",
-      "lng": 116.33313,
-      "lat": 39.982626,
+      "name": "示例·餐饮 08",
+      "category": "restaurant",
+      "lng": 116.340352,
+      "lat": 39.981836,
       "address": "示例地址 43 号",
-      "distance": 1280
+      "distance": 658
     },
     {
       "id": "p044",
-      "name": "示例·超市 09",
-      "category": "market",
-      "lng": 116.362992,
-      "lat": 39.970481,
+      "name": "示例·咖啡 08",
+      "category": "cafe",
+      "lng": 116.355632,
+      "lat": 39.975645,
       "address": "示例地址 44 号",
-      "distance": 1732
+      "distance": 882
     },
     {
       "id": "p045",
-      "name": "示例·校园 09",
-      "category": "campus",
-      "lng": 116.354978,
-      "lat": 39.990436,
+      "name": "示例·景点 08",
+      "category": "attraction",
+      "lng": 116.351598,
+      "lat": 39.985866,
       "address": "示例地址 45 号",
-      "distance": 1206
+      "distance": 622
     },
     {
       "id": "p046",
-      "name": "示例·餐饮 10",
-      "category": "restaurant",
-      "lng": 116.350047,
-      "lat": 39.983512,
+      "name": "示例·商场 08",
+      "category": "mall",
+      "lng": 116.352848,
+      "lat": 39.98695,
       "address": "示例地址 46 号",
-      "distance": 329
+      "distance": 780
     },
     {
       "id": "p047",
-      "name": "示例·咖啡 10",
-      "category": "cafe",
-      "lng": 116.350294,
-      "lat": 39.979493,
+      "name": "示例·超市 08",
+      "category": "market",
+      "lng": 116.354153,
+      "lat": 39.976959,
       "address": "示例地址 47 号",
-      "distance": 257
+      "distance": 690
     },
     {
       "id": "p048",
-      "name": "示例·交通 10",
+      "name": "示例·交通 08",
       "category": "transit",
-      "lng": 116.344102,
-      "lat": 39.980164,
+      "lng": 116.338986,
+      "lat": 39.979067,
       "address": "示例地址 48 号",
-      "distance": 345
+      "distance": 798
     }
   ]
 }

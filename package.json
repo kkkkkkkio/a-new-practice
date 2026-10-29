@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/check-env.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db:backup": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/backup-db.mjs",
+    "check:env": "node scripts/check-env.mjs"
   },
   "dependencies": {
     "better-sqlite3": "^13.0.3",

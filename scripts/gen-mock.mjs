@@ -14,13 +14,15 @@ const CENTER = { lng: 116.348, lat: 39.981 };
 const OUT_RADIUS = 2000;
 const COUNT = 48;
 
-// 分类顺序固定，后面按 i % 5 轮流取，保证每类数量接近
+// 分类顺序固定，后面按 i % 6 轮流取，保证每类数量接近
+// 2026-10-28 按《地图界面需求》调整：删 campus，加 attraction / mall
 const CATEGORIES = [
   { id: "restaurant", label: "餐饮" },
   { id: "cafe", label: "咖啡" },
-  { id: "transit", label: "交通" },
+  { id: "attraction", label: "景点" },
+  { id: "mall", label: "商场" },
   { id: "market", label: "超市" },
-  { id: "campus", label: "校园" },
+  { id: "transit", label: "交通" },
 ];
 
 // 线性同余伪随机：不用 Math.random，保证每次生成结果完全一致（可复现）
